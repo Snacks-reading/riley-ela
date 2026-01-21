@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Riley Reads & Spells — ELA</title>
+<script src="core/registry.js"></script>
+<style>
+body{margin:0;background:#070b16;color:#eaf2ff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+header{padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.12)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;padding:16px}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:12px;cursor:pointer}
+.small{opacity:.75;font-size:12px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.18);font-size:12px;opacity:.85}
+</style>
+</head>
+<body>
+<header>
+  <div style="font-size:22px;font-weight:800">Riley Reads & Spells — ELA</div>
+  <div class="small" id="subtitle"></div>
+</header>
+<div class="grid" id="grid"></div>
+<script>
+const reg = window.RILEY_ELA_REGISTRY;
+document.getElementById('subtitle').textContent = `${reg.phase} • ${reg.courseLabel}`;
+const grid = document.getElementById('grid');
+reg.modules.forEach(m=>{
+  const d=document.createElement('div');
+  d.className='card';
+  d.innerHTML = `<div class="badge">${m.id} • ${m.status}</div><div style="margin-top:8px;font-size:16px;font-weight:700">${m.title}</div><div class="small" style="margin-top:6px">${m.summary||''}</div>`;
+  d.onclick=()=>location.href=m.path;
+  grid.appendChild(d);
+});
+</script>
+</body>
+</html>

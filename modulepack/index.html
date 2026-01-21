@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Riley Reads & Spells — ELA</title>
+  <link rel="stylesheet" href="core/styles.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Riley Reads &amp; Spells</h1>
+      <p>ELA — Rule modules + Sight Words (Dolch &amp; Fry). Pick a lesson to start.</p>
+    </div>
+    <div class="badge">Phase 1 • Module A</div>
+  </header>
+
+  <div class="container">
+    <section class="card">
+      <div class="body">
+        <h2>Modules</h2>
+        <div id="grid" class="grid" aria-label="Module grid"></div>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section class="card">
+        <div class="body">
+          <div class="avatarWrap">
+            <img src="assets/avatars/riley-avatar.png" alt="Riley avatar" />
+            <div>
+              <div style="font-weight:700; font-size:16px;">Riley</div>
+              <div class="small">Upbeat galaxy guide • celebration + coaching avatars inside each module.</div>
+            </div>
+          </div>
+          <hr />
+          <div class="small">
+            <div><b>Daily flow (default):</b> 1) Teach → 2) Practice 15–30 min → 3) Recycle missed only</div>
+            <div style="margin-top:8px;"><b>Sight Words:</b> separate lane (SW1) so we can do Dolch + Fry packs without mixing with rule modules.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="body">
+          <h2>Launch</h2>
+          <div class="small">This repo is GitHub Pages friendly. All links are relative. No file:// paths.</div>
+          <div style="margin-top:10px" class="small">
+            <b>Tip:</b> iPhone/iPad Files preview can block buttons; use Share → Open in Safari.
+          </div>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="footer">© Riley Reads &amp; Spells • Phase 1 module registry</div>
+
+  <script src="core/registry.js"></script>
+  <script>
+    const reg = window.RILEY_ELA_REGISTRY;
+    const grid = document.getElementById('grid');
+
+    function badgeClass(status){
+      if(status === 'LOCKED_BASELINE') return 'badge locked';
+      return 'badge planned';
+    }
+
+    function badgeLabel(status){
+      if(status === 'LOCKED_BASELINE') return 'LOCKED';
+      return 'PLANNED';
+    }
+
+    reg.modules.forEach(m => {
+      const tile = document.createElement('div');
+      tile.className = 'tile';
+      tile.tabIndex = 0;
+      tile.setAttribute('role','button');
+      tile.setAttribute('aria-label', `${m.id} ${m.title}`);
+      tile.innerHTML = `
+        <div class="top">
+          <div class="badge">${m.id}</div>
+          <div class="${badgeClass(m.status)}">${badgeLabel(m.status)}</div>
+        </div>
+        <h3>${m.title}</h3>
+        <p>${m.notes}</p>
+      `;
+      const go = () => window.location.href = m.path;
+      tile.addEventListener('click', go);
+      tile.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+      });
+      grid.appendChild(tile);
+    });
+  </script>
+</body>
+</html>
