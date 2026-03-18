@@ -1,0 +1,40 @@
+{
+  "categoryId": "word-builders",
+  "lessons": [
+    {
+      "code": "WB1",
+      "title": "Base Words",
+      "folder": "WB1_base-words"
+    },
+    {
+      "code": "WB2",
+      "title": "Add Prefix",
+      "folder": "WB2_add-prefix"
+    },
+    {
+      "code": "WB3",
+      "title": "Add Suffix",
+      "folder": "WB3_add-suffix"
+    },
+    {
+      "code": "WB4",
+      "title": "Root and Affix Meaning",
+      "folder": "WB4_root-and-affix-meaning"
+    },
+    {
+      "code": "WB5",
+      "title": "Greek Roots",
+      "folder": "WB5_greek-roots"
+    },
+    {
+      "code": "WB6",
+      "title": "Latin Roots",
+      "folder": "WB6_latin-roots"
+    },
+    {
+      "code": "WB7",
+      "title": "Word Pattern Analogies",
+      "folder": "WB7_word-pattern-analogies"
+    }
+  ]
+}

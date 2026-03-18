@@ -1,0 +1,30 @@
+{
+  "categoryId": "vowel-vault",
+  "lessons": [
+    {
+      "code": "VV1",
+      "title": "Short Vowels",
+      "folder": "VV1_short-vowels"
+    },
+    {
+      "code": "VV2",
+      "title": "Long Vowels",
+      "folder": "VV2_long-vowels"
+    },
+    {
+      "code": "VV3",
+      "title": "Vowel Teams",
+      "folder": "VV3_vowel-teams"
+    },
+    {
+      "code": "VV4",
+      "title": "Diphthongs",
+      "folder": "VV4_diphthongs"
+    },
+    {
+      "code": "VV5",
+      "title": "Schwa",
+      "folder": "VV5_schwa"
+    }
+  ]
+}

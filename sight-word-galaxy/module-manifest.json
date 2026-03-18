@@ -1,0 +1,65 @@
+{
+  "categoryId": "sight-word-galaxy",
+  "lessons": [
+    {
+      "code": "SG1",
+      "title": "Fry 1–100",
+      "folder": "SG1_fry-1-100"
+    },
+    {
+      "code": "SG2",
+      "title": "Fry 101–200",
+      "folder": "SG2_fry-101-200"
+    },
+    {
+      "code": "SG3",
+      "title": "Fry 201–300",
+      "folder": "SG3_fry-201-300"
+    },
+    {
+      "code": "SG4",
+      "title": "Fry 301–400",
+      "folder": "SG4_fry-301-400"
+    },
+    {
+      "code": "SG5",
+      "title": "Fry 401–500",
+      "folder": "SG5_fry-401-500"
+    },
+    {
+      "code": "SG6",
+      "title": "Dolch Pre-Primer",
+      "folder": "SG6_dolch-pre-primer"
+    },
+    {
+      "code": "SG7",
+      "title": "Dolch Primer",
+      "folder": "SG7_dolch-primer"
+    },
+    {
+      "code": "SG8",
+      "title": "Dolch Grade 1",
+      "folder": "SG8_dolch-grade-1"
+    },
+    {
+      "code": "SG9",
+      "title": "Dolch Grade 2",
+      "folder": "SG9_dolch-grade-2"
+    },
+    {
+      "code": "SG10",
+      "title": "Dolch Grade 3",
+      "folder": "SG10_dolch-grade-3"
+    },
+    {
+      "code": "SG11",
+      "title": "Review Cycles",
+      "folder": "SG11_review-cycles"
+    },
+    {
+      "code": "SG12",
+      "title": "Mixed Mastery Rotation",
+      "folder": "SG12_mixed-mastery-rotation"
+    }
+  ]
+}

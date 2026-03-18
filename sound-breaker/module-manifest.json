@@ -1,0 +1,40 @@
+{
+  "categoryId": "sound-breaker",
+  "lessons": [
+    {
+      "code": "SB1",
+      "title": "Blend Sounds",
+      "folder": "SB1_blend-sounds"
+    },
+    {
+      "code": "SB2",
+      "title": "Segment Sounds",
+      "folder": "SB2_segment-sounds"
+    },
+    {
+      "code": "SB3",
+      "title": "Onset and Rime",
+      "folder": "SB3_onset-and-rime"
+    },
+    {
+      "code": "SB4",
+      "title": "Same Beginning Sound",
+      "folder": "SB4_same-beginning-sound"
+    },
+    {
+      "code": "SB5",
+      "title": "Same Ending Sound",
+      "folder": "SB5_same-ending-sound"
+    },
+    {
+      "code": "SB6",
+      "title": "Rhyming Identification",
+      "folder": "SB6_rhyming-identification"
+    },
+    {
+      "code": "SB7",
+      "title": "Identify Each Sound in Word",
+      "folder": "SB7_identify-each-sound-in-word"
+    }
+  ]
+}

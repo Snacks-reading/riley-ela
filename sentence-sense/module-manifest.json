@@ -1,0 +1,55 @@
+{
+  "categoryId": "sentence-sense",
+  "lessons": [
+    {
+      "code": "SE1",
+      "title": "Complete the Sentence",
+      "folder": "SE1_complete-the-sentence"
+    },
+    {
+      "code": "SE2",
+      "title": "One or More Than One",
+      "folder": "SE2_one-or-more-than-one"
+    },
+    {
+      "code": "SE3",
+      "title": "Singular vs Plural",
+      "folder": "SE3_singular-vs-plural"
+    },
+    {
+      "code": "SE4",
+      "title": "Pronoun-Verb Agreement",
+      "folder": "SE4_pronoun-verb-agreement"
+    },
+    {
+      "code": "SE5",
+      "title": "Predicate Adjectives",
+      "folder": "SE5_predicate-adjectives"
+    },
+    {
+      "code": "SE6",
+      "title": "Predicate Nouns",
+      "folder": "SE6_predicate-nouns"
+    },
+    {
+      "code": "SE7",
+      "title": "Linking Verbs",
+      "folder": "SE7_linking-verbs"
+    },
+    {
+      "code": "SE8",
+      "title": "Correlative Conjunctions",
+      "folder": "SE8_correlative-conjunctions"
+    },
+    {
+      "code": "SE9",
+      "title": "Fragments vs Run-ons",
+      "folder": "SE9_fragments-vs-run-ons"
+    },
+    {
+      "code": "SE10",
+      "title": "Sentence Combining",
+      "folder": "SE10_sentence-combining"
+    }
+  ]
+}

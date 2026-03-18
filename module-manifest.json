@@ -1,0 +1,45 @@
+{
+  "categoryId": "morphology-mission",
+  "lessons": [
+    {
+      "code": "MM1",
+      "title": "Prefixes",
+      "folder": "MM1_prefixes"
+    },
+    {
+      "code": "MM2",
+      "title": "Suffixes",
+      "folder": "MM2_suffixes"
+    },
+    {
+      "code": "MM3",
+      "title": "Verb to Noun",
+      "folder": "MM3_verb-to-noun"
+    },
+    {
+      "code": "MM4",
+      "title": "Noun to Adjective",
+      "folder": "MM4_noun-to-adjective"
+    },
+    {
+      "code": "MM5",
+      "title": "Adjective to Adverb",
+      "folder": "MM5_adjective-to-adverb"
+    },
+    {
+      "code": "MM6",
+      "title": "Compound Words",
+      "folder": "MM6_compound-words"
+    },
+    {
+      "code": "MM7",
+      "title": "Greek Roots",
+      "folder": "MM7_greek-roots"
+    },
+    {
+      "code": "MM8",
+      "title": "Latin Roots",
+      "folder": "MM8_latin-roots"
+    }
+  ]
+}

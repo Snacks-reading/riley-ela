@@ -1,0 +1,40 @@
+{
+  "categoryId": "syllable-smash",
+  "lessons": [
+    {
+      "code": "SS1",
+      "title": "Closed Syllables",
+      "folder": "SS1_closed-syllables"
+    },
+    {
+      "code": "SS2",
+      "title": "Open Syllables",
+      "folder": "SS2_open-syllables"
+    },
+    {
+      "code": "SS3",
+      "title": "Magic-E Syllables",
+      "folder": "SS3_magic-e-syllables"
+    },
+    {
+      "code": "SS4",
+      "title": "R-Controlled Syllables",
+      "folder": "SS4_r-controlled-syllables"
+    },
+    {
+      "code": "SS5",
+      "title": "Vowel Team Syllables",
+      "folder": "SS5_vowel-team-syllables"
+    },
+    {
+      "code": "SS6",
+      "title": "Consonant-le Syllables",
+      "folder": "SS6_consonant-le-syllables"
+    },
+    {
+      "code": "SS7",
+      "title": "Multisyllabic Decoding",
+      "folder": "SS7_multisyllabic-decoding"
+    }
+  ]
+}
