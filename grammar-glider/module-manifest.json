@@ -1,0 +1,55 @@
+{
+  "categoryId": "grammar-glider",
+  "lessons": [
+    {
+      "code": "GG1",
+      "title": "Identify Adjectives",
+      "folder": "GG1_identify-adjectives"
+    },
+    {
+      "code": "GG2",
+      "title": "Order Adjectives",
+      "folder": "GG2_order-adjectives"
+    },
+    {
+      "code": "GG3",
+      "title": "Comparative Adjectives",
+      "folder": "GG3_comparative-adjectives"
+    },
+    {
+      "code": "GG4",
+      "title": "Superlative Adjectives",
+      "folder": "GG4_superlative-adjectives"
+    },
+    {
+      "code": "GG5",
+      "title": "Identify Adverbs",
+      "folder": "GG5_identify-adverbs"
+    },
+    {
+      "code": "GG6",
+      "title": "Articles",
+      "folder": "GG6_articles"
+    },
+    {
+      "code": "GG7",
+      "title": "Modifiers",
+      "folder": "GG7_modifiers"
+    },
+    {
+      "code": "GG8",
+      "title": "Verb Tense",
+      "folder": "GG8_verb-tense"
+    },
+    {
+      "code": "GG9",
+      "title": "Pronouns",
+      "folder": "GG9_pronouns"
+    },
+    {
+      "code": "GG10",
+      "title": "Sentence Corrections",
+      "folder": "GG10_sentence-corrections"
+    }
+  ]
+}

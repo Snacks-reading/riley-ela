@@ -1,0 +1,35 @@
+{
+  "categoryId": "inference-station",
+  "lessons": [
+    {
+      "code": "IN1",
+      "title": "Predict Using Images",
+      "folder": "IN1_predict-using-images"
+    },
+    {
+      "code": "IN2",
+      "title": "Predict Using Statements",
+      "folder": "IN2_predict-using-statements"
+    },
+    {
+      "code": "IN3",
+      "title": "Infer a Picture",
+      "folder": "IN3_infer-a-picture"
+    },
+    {
+      "code": "IN4",
+      "title": "Infer a Situation",
+      "folder": "IN4_infer-a-situation"
+    },
+    {
+      "code": "IN5",
+      "title": "Cause",
+      "folder": "IN5_cause"
+    },
+    {
+      "code": "IN6",
+      "title": "Effect",
+      "folder": "IN6_effect"
+    }
+  ]
+}

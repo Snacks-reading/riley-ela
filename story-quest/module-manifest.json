@@ -1,0 +1,140 @@
+{
+  "categoryId": "story-quest",
+  "lessons": [
+    {
+      "code": "SQ1",
+      "title": "Lightning Thief Part 1",
+      "folder": "SQ1_lightning-thief-part-1"
+    },
+    {
+      "code": "SQ2",
+      "title": "Lightning Thief Part 2",
+      "folder": "SQ2_lightning-thief-part-2"
+    },
+    {
+      "code": "SQ3",
+      "title": "Roll of Thunder Part 1",
+      "folder": "SQ3_roll-of-thunder-part-1"
+    },
+    {
+      "code": "SQ4",
+      "title": "Roll of Thunder Part 2",
+      "folder": "SQ4_roll-of-thunder-part-2"
+    },
+    {
+      "code": "SQ5",
+      "title": "Esperanza Rising Part 1",
+      "folder": "SQ5_esperanza-rising-part-1"
+    },
+    {
+      "code": "SQ6",
+      "title": "Esperanza Rising Part 2",
+      "folder": "SQ6_esperanza-rising-part-2"
+    },
+    {
+      "code": "SQ7",
+      "title": "Harriet Tubman Part 1",
+      "folder": "SQ7_harriet-tubman-part-1"
+    },
+    {
+      "code": "SQ8",
+      "title": "Harriet Tubman Part 2",
+      "folder": "SQ8_harriet-tubman-part-2"
+    },
+    {
+      "code": "SQ9",
+      "title": "I Am Malala Part 1",
+      "folder": "SQ9_i-am-malala-part-1"
+    },
+    {
+      "code": "SQ10",
+      "title": "I Am Malala Part 2",
+      "folder": "SQ10_i-am-malala-part-2"
+    },
+    {
+      "code": "SQ11",
+      "title": "A Long Walk to Water",
+      "folder": "SQ11_a-long-walk-to-water"
+    },
+    {
+      "code": "SQ12",
+      "title": "Anne of Green Gables",
+      "folder": "SQ12_anne-of-green-gables"
+    },
+    {
+      "code": "SQ13",
+      "title": "The Hobbit",
+      "folder": "SQ13_the-hobbit"
+    },
+    {
+      "code": "SQ14",
+      "title": "Anne Frank",
+      "folder": "SQ14_anne-frank"
+    },
+    {
+      "code": "SQ15",
+      "title": "A Night to Remember",
+      "folder": "SQ15_a-night-to-remember"
+    },
+    {
+      "code": "SQ16",
+      "title": "The Giver",
+      "folder": "SQ16_the-giver"
+    },
+    {
+      "code": "SQ17",
+      "title": "The Outsiders",
+      "folder": "SQ17_the-outsiders"
+    },
+    {
+      "code": "SQ18",
+      "title": "Frederick Douglass",
+      "folder": "SQ18_frederick-douglass"
+    },
+    {
+      "code": "SQ19",
+      "title": "Travels with Charley",
+      "folder": "SQ19_travels-with-charley"
+    },
+    {
+      "code": "SQ20",
+      "title": "To Kill a Mockingbird",
+      "folder": "SQ20_to-kill-a-mockingbird"
+    },
+    {
+      "code": "SQ21",
+      "title": "Night",
+      "folder": "SQ21_night"
+    },
+    {
+      "code": "SQ22",
+      "title": "Things Fall Apart",
+      "folder": "SQ22_things-fall-apart"
+    },
+    {
+      "code": "SQ23",
+      "title": "Into Thin Air",
+      "folder": "SQ23_into-thin-air"
+    },
+    {
+      "code": "SQ24",
+      "title": "The Great Gatsby",
+      "folder": "SQ24_the-great-gatsby"
+    },
+    {
+      "code": "SQ25",
+      "title": "The Prince",
+      "folder": "SQ25_the-prince"
+    },
+    {
+      "code": "SQ26",
+      "title": "Frankenstein",
+      "folder": "SQ26_frankenstein"
+    },
+    {
+      "code": "SQ27",
+      "title": "Walden",
+      "folder": "SQ27_walden"
+    }
+  ]
+}

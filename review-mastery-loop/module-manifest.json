@@ -1,0 +1,35 @@
+{
+  "categoryId": "review-mastery-loop",
+  "lessons": [
+    {
+      "code": "RM1",
+      "title": "Mixed Phonics Review",
+      "folder": "RM1_mixed-phonics-review"
+    },
+    {
+      "code": "RM2",
+      "title": "Mixed Grammar Review",
+      "folder": "RM2_mixed-grammar-review"
+    },
+    {
+      "code": "RM3",
+      "title": "Mixed Vocabulary Review",
+      "folder": "RM3_mixed-vocabulary-review"
+    },
+    {
+      "code": "RM4",
+      "title": "Weekly Spiral",
+      "folder": "RM4_weekly-spiral"
+    },
+    {
+      "code": "RM5",
+      "title": "Monthly Spiral",
+      "folder": "RM5_monthly-spiral"
+    },
+    {
+      "code": "RM6",
+      "title": "Retention Booster",
+      "folder": "RM6_retention-booster"
+    }
+  ]
+}

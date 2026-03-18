@@ -1,0 +1,30 @@
+{
+  "categoryId": "challenge-mode",
+  "lessons": [
+    {
+      "code": "CM1",
+      "title": "Boss Battle: Phonics",
+      "folder": "CM1_boss-battle-phonics"
+    },
+    {
+      "code": "CM2",
+      "title": "Boss Battle: Grammar",
+      "folder": "CM2_boss-battle-grammar"
+    },
+    {
+      "code": "CM3",
+      "title": "Boss Battle: Vocabulary",
+      "folder": "CM3_boss-battle-vocabulary"
+    },
+    {
+      "code": "CM4",
+      "title": "Timed Mastery Gauntlet",
+      "folder": "CM4_timed-mastery-gauntlet"
+    },
+    {
+      "code": "CM5",
+      "title": "Mixed Grade Mode",
+      "folder": "CM5_mixed-grade-mode"
+    }
+  ]
+}

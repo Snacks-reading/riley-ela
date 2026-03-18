@@ -1,0 +1,55 @@
+{
+  "categoryId": "writing-arena",
+  "lessons": [
+    {
+      "code": "WA1",
+      "title": "Revise with Stronger Verb",
+      "folder": "WA1_revise-with-stronger-verb"
+    },
+    {
+      "code": "WA2",
+      "title": "Add Descriptive Detail",
+      "folder": "WA2_add-descriptive-detail"
+    },
+    {
+      "code": "WA3",
+      "title": "Replace with Thesaurus",
+      "folder": "WA3_replace-with-thesaurus"
+    },
+    {
+      "code": "WA4",
+      "title": "Active Voice Rewrite",
+      "folder": "WA4_active-voice-rewrite"
+    },
+    {
+      "code": "WA5",
+      "title": "Remove Redundancy",
+      "folder": "WA5_remove-redundancy"
+    },
+    {
+      "code": "WA6",
+      "title": "Identify Plagiarism",
+      "folder": "WA6_identify-plagiarism"
+    },
+    {
+      "code": "WA7",
+      "title": "TCAP Writing Rubric Practice",
+      "folder": "WA7_tcap-writing-rubric-practice"
+    },
+    {
+      "code": "WA8",
+      "title": "Constructed Response",
+      "folder": "WA8_constructed-response"
+    },
+    {
+      "code": "WA9",
+      "title": "Essay Organization",
+      "folder": "WA9_essay-organization"
+    },
+    {
+      "code": "WA10",
+      "title": "Evidence Integration",
+      "folder": "WA10_evidence-integration"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "categoryId": "consonant-lab",
+  "lessons": [
+    {
+      "code": "CL1",
+      "title": "Blends",
+      "folder": "CL1_blends"
+    },
+    {
+      "code": "CL2",
+      "title": "Digraphs",
+      "folder": "CL2_digraphs"
+    },
+    {
+      "code": "CL3",
+      "title": "Silent Consonants",
+      "folder": "CL3_silent-consonants"
+    },
+    {
+      "code": "CL4",
+      "title": "Hard and Soft Sounds",
+      "folder": "CL4_hard-and-soft-sounds"
+    },
+    {
+      "code": "CL5",
+      "title": "Complex Clusters",
+      "folder": "CL5_complex-clusters"
+    }
+  ]
+}

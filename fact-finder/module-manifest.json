@@ -1,0 +1,40 @@
+{
+  "categoryId": "fact-finder",
+  "lessons": [
+    {
+      "code": "FA1",
+      "title": "Topic and Purpose",
+      "folder": "FA1_topic-and-purpose"
+    },
+    {
+      "code": "FA2",
+      "title": "Text Structures",
+      "folder": "FA2_text-structures"
+    },
+    {
+      "code": "FA3",
+      "title": "Trace an Argument",
+      "folder": "FA3_trace-an-argument"
+    },
+    {
+      "code": "FA4",
+      "title": "Identify Supporting Evidence",
+      "folder": "FA4_identify-supporting-evidence"
+    },
+    {
+      "code": "FA5",
+      "title": "Match Problems and Solutions",
+      "folder": "FA5_match-problems-and-solutions"
+    },
+    {
+      "code": "FA6",
+      "title": "Concluding Sentence",
+      "folder": "FA6_concluding-sentence"
+    },
+    {
+      "code": "FA7",
+      "title": "Main Idea across 2 Texts",
+      "folder": "FA7_main-idea-across-2-texts"
+    }
+  ]
+}
