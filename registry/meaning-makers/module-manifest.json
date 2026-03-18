@@ -1,0 +1,55 @@
+{
+  "categoryId": "meaning-makers",
+  "lessons": [
+    {
+      "code": "MK1",
+      "title": "Synonyms",
+      "folder": "MK1_synonyms"
+    },
+    {
+      "code": "MK2",
+      "title": "Antonyms",
+      "folder": "MK2_antonyms"
+    },
+    {
+      "code": "MK3",
+      "title": "Multiple-Meaning Words",
+      "folder": "MK3_multiple-meaning-words"
+    },
+    {
+      "code": "MK4",
+      "title": "Context Clues",
+      "folder": "MK4_context-clues"
+    },
+    {
+      "code": "MK5",
+      "title": "Shades of Meaning",
+      "folder": "MK5_shades-of-meaning"
+    },
+    {
+      "code": "MK6",
+      "title": "Category Words",
+      "folder": "MK6_category-words"
+    },
+    {
+      "code": "MK7",
+      "title": "Analogies",
+      "folder": "MK7_analogies"
+    },
+    {
+      "code": "MK8",
+      "title": "Academic Vocabulary",
+      "folder": "MK8_academic-vocabulary"
+    },
+    {
+      "code": "MK9",
+      "title": "Main Idea and Details",
+      "folder": "MK9_main-idea-and-details"
+    },
+    {
+      "code": "MK10",
+      "title": "Vocabulary Review",
+      "folder": "MK10_vocabulary-review"
+    }
+  ]
+}
