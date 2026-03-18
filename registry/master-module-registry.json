@@ -1,0 +1,248 @@
+{
+  "version": "v24-stable-rebuild",
+  "tier1_categories": [
+    {
+      "id": "star-speller",
+      "title": "Star Speller",
+      "book_asset": "assets/books/star-speller.png",
+      "route": "category-board.html?cat=star-speller",
+      "purpose": "Core spelling and phonics rules"
+    },
+    {
+      "id": "wordplay-forge",
+      "title": "Wordplay Forge",
+      "book_asset": "assets/books/wordplay-forge.png",
+      "route": "category-board.html?cat=wordplay-forge",
+      "purpose": "Word formation and manipulation"
+    },
+    {
+      "id": "sight-word-galaxy",
+      "title": "Sight-Word Galaxy",
+      "book_asset": "assets/books/sight-word-galaxy.png",
+      "route": "category-board.html?cat=sight-word-galaxy",
+      "purpose": "Dolch and Fry mastery"
+    },
+    {
+      "id": "sound-breaker",
+      "title": "Sound Breaker",
+      "book_asset": "assets/books/sound-breaker.png",
+      "route": "category-board.html?cat=sound-breaker",
+      "purpose": "Phonemic awareness and sound mapping"
+    },
+    {
+      "id": "syllable-smash",
+      "title": "Syllable Smash",
+      "book_asset": "assets/books/syllable-smash.png",
+      "route": "category-board.html?cat=syllable-smash",
+      "purpose": "Syllables and division strategies"
+    },
+    {
+      "id": "vowel-vault",
+      "title": "Vowel Vault",
+      "book_asset": "assets/books/vowel-vault.png",
+      "route": "category-board.html?cat=vowel-vault",
+      "purpose": "Short, long, and shifted vowels"
+    },
+    {
+      "id": "consonant-lab",
+      "title": "Consonant Lab",
+      "book_asset": "assets/books/consonant-lab.png",
+      "route": "category-board.html?cat=consonant-lab",
+      "purpose": "Blends, digraphs, and silent letters"
+    },
+    {
+      "id": "word-builders",
+      "title": "Word Builders",
+      "book_asset": "assets/books/word-builders.png",
+      "route": "category-board.html?cat=word-builders",
+      "purpose": "Prefixes, suffixes, and roots"
+    },
+    {
+      "id": "morphology-mission",
+      "title": "Morphology Mission",
+      "book_asset": "assets/books/morphology-mission.png",
+      "route": "category-board.html?cat=morphology-mission",
+      "purpose": "Morphology and academic vocabulary"
+    },
+    {
+      "id": "grammar-glider",
+      "title": "Grammar Glider",
+      "book_asset": "assets/books/grammar-glider.png",
+      "route": "category-board.html?cat=grammar-glider",
+      "purpose": "Grammar skills"
+    },
+    {
+      "id": "sentence-sense",
+      "title": "Sentence Sense",
+      "book_asset": "assets/books/sentence-sense.png",
+      "route": "category-board.html?cat=sentence-sense",
+      "purpose": "Sentence craft and revision"
+    },
+    {
+      "id": "fluency-flight",
+      "title": "Fluency Flight",
+      "book_asset": "assets/books/fluency-flight.png",
+      "route": "category-board.html?cat=fluency-flight",
+      "purpose": "Rate, phrasing, and expression"
+    },
+    {
+      "id": "meaning-makers",
+      "title": "Meaning Makers",
+      "book_asset": "assets/books/meaning-makers.png",
+      "route": "category-board.html?cat=meaning-makers",
+      "purpose": "Vocabulary and meaning"
+    },
+    {
+      "id": "inference-station",
+      "title": "Inference Station",
+      "book_asset": "assets/books/inference-station.png",
+      "route": "category-board.html?cat=inference-station",
+      "purpose": "Evidence and inference"
+    },
+    {
+      "id": "story-quest",
+      "title": "Story Quest",
+      "book_asset": "assets/books/story-quest.png",
+      "route": "category-board.html?cat=story-quest",
+      "purpose": "Literature comprehension"
+    },
+    {
+      "id": "fact-finder",
+      "title": "Fact Finder",
+      "book_asset": "assets/books/fact-finder.png",
+      "route": "category-board.html?cat=fact-finder",
+      "purpose": "Informational text"
+    },
+    {
+      "id": "writing-arena",
+      "title": "Writing Arena",
+      "book_asset": "assets/books/writing-arena.png",
+      "route": "category-board.html?cat=writing-arena",
+      "purpose": "Writing practice"
+    },
+    {
+      "id": "review-mastery-loop",
+      "title": "Review & Mastery Loop",
+      "book_asset": "assets/books/review-mastery-loop.png",
+      "route": "category-board.html?cat=review-mastery-loop",
+      "purpose": "Spiral review and mastery"
+    },
+    {
+      "id": "challenge-mode",
+      "title": "Challenge Mode / Boss Battles",
+      "book_asset": "assets/books/challenge-mode.png",
+      "route": "category-board.html?cat=challenge-mode",
+      "purpose": "Mixed-skill challenge mode"
+    }
+  ],
+  "tier2_star_speller": [
+    {
+      "code": "A1",
+      "title": "Guard the Vowel",
+      "crest_asset": "assets/crests/A1.png",
+      "route": "lesson.html?cat=star-speller&lesson=A1"
+    },
+    {
+      "code": "A1.5",
+      "title": "FLOSS Rule",
+      "crest_asset": "assets/crests/A1.5.png",
+      "route": "lesson.html?cat=star-speller&lesson=A1.5"
+    },
+    {
+      "code": "A2",
+      "title": "Silent-E (Magic-E / Drop-E)",
+      "crest_asset": "assets/crests/A2.png",
+      "route": "lesson.html?cat=star-speller&lesson=A2"
+    },
+    {
+      "code": "A3",
+      "title": "Vowel Teams",
+      "crest_asset": "assets/crests/A3.png",
+      "route": "lesson.html?cat=star-speller&lesson=A3"
+    },
+    {
+      "code": "A4",
+      "title": "R-Controlled Vowels",
+      "crest_asset": "assets/crests/A4.png",
+      "route": "lesson.html?cat=star-speller&lesson=A4"
+    },
+    {
+      "code": "A5",
+      "title": "Diphthongs",
+      "crest_asset": "assets/crests/A5.png",
+      "route": "lesson.html?cat=star-speller&lesson=A5"
+    },
+    {
+      "code": "A6",
+      "title": "Syllable Types",
+      "crest_asset": "assets/crests/A6.png",
+      "route": "lesson.html?cat=star-speller&lesson=A6"
+    },
+    {
+      "code": "A7",
+      "title": "Consonant Doubling",
+      "crest_asset": "assets/crests/A7.png",
+      "route": "lesson.html?cat=star-speller&lesson=A7"
+    },
+    {
+      "code": "A8",
+      "title": "Hard & Soft C/G",
+      "crest_asset": "assets/crests/A8.png",
+      "route": "lesson.html?cat=star-speller&lesson=A8"
+    },
+    {
+      "code": "A9",
+      "title": "Final Stable Syllables",
+      "crest_asset": "assets/crests/A9.png",
+      "route": "lesson.html?cat=star-speller&lesson=A9"
+    },
+    {
+      "code": "A10",
+      "title": "Prefix Foundations",
+      "crest_asset": "assets/crests/A10.png",
+      "route": "lesson.html?cat=star-speller&lesson=A10"
+    },
+    {
+      "code": "A11",
+      "title": "Suffix Foundations",
+      "crest_asset": "assets/crests/A11.png",
+      "route": "lesson.html?cat=star-speller&lesson=A11"
+    },
+    {
+      "code": "A12",
+      "title": "Plurals & Possessives",
+      "crest_asset": "assets/crests/A12.png",
+      "route": "lesson.html?cat=star-speller&lesson=A12"
+    },
+    {
+      "code": "A13",
+      "title": "Homophones",
+      "crest_asset": "assets/crests/A13.png",
+      "route": "lesson.html?cat=star-speller&lesson=A13"
+    },
+    {
+      "code": "A14",
+      "title": "Irregular Spellings",
+      "crest_asset": "assets/crests/A14.png",
+      "route": "lesson.html?cat=star-speller&lesson=A14"
+    },
+    {
+      "code": "A15",
+      "title": "Greek & Latin Roots",
+      "crest_asset": "assets/crests/A15.png",
+      "route": "lesson.html?cat=star-speller&lesson=A15"
+    },
+    {
+      "code": "A16",
+      "title": "Advanced Vowel Patterns",
+      "crest_asset": "assets/crests/A16.png",
+      "route": "lesson.html?cat=star-speller&lesson=A16"
+    },
+    {
+      "code": "A17",
+      "title": "Multi-Syllable Encoding",
+      "crest_asset": "assets/crests/A17.png",
+      "route": "lesson.html?cat=star-speller&lesson=A17"
+    }
+  ]
+}

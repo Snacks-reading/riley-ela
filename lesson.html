@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lesson — Riley Reads & Spells</title>
+  <style>
+    :root{
+      --bg1:#24104f;
+      --bg2:#0d5a79;
+      --stroke:rgba(255,255,255,.10);
+      --ink:#8a5a1f;
+      --ink2:#6f4717;
+      --paper1:#f4e7be;
+      --paper2:#e7cf99;
+      --white:#fffdf8;
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--white);
+      background:
+        radial-gradient(900px 500px at 18% 0%, rgba(122,65,216,.34), transparent 58%),
+        linear-gradient(135deg,var(--bg1),var(--bg2));
+    }
+    body{display:flex;flex-direction:column}
+    header{
+      padding:12px 18px 8px;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:16px;
+      flex:0 0 auto;
+    }
+    h1{
+      margin:0;
+      font-size:42px;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:-.02em;
+    }
+    .backBtn,.btn{
+      appearance:none;
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.08);
+      color:var(--white);
+      padding:10px 16px;
+      border-radius:18px;
+      font-weight:800;
+      font-size:14px;
+      text-decoration:none;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .controls{
+      padding:0 18px 8px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      flex:0 0 auto;
+    }
+    .btn{padding:8px 12px;border-radius:16px}
+    .btn.toggle{display:flex;align-items:center;gap:8px}
+    .btn.warn{
+      background:rgba(170,50,50,.20);
+      border-color:rgba(255,180,180,.20);
+    }
+    .scriptBar{
+      margin:0 18px 10px;
+      padding:10px 14px;
+      min-height:48px;
+      max-height:96px;
+      overflow:auto;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.06));
+      color:#f6efdf;
+      font-size:15px;
+      line-height:1.24;
+      flex:0 0 auto;
+    }
+    .shell{
+      margin:0 18px 18px;
+      padding:10px;
+      border-radius:26px;
+      border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.08));
+      height:calc(100vh - 156px);
+      min-height:0;
+      flex:1 1 auto;
+    }
+    .lessonLayout{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 310px;
+      gap:12px;
+      height:100%;
+      min-height:0;
+    }
+    .mainPanel{
+      display:grid;
+      grid-template-columns:1fr 1fr .95fr;
+      gap:12px;
+      min-height:0;
+      height:100%;
+    }
+    .parchment{
+      min-height:0;
+      height:100%;
+      overflow:auto;
+      border-radius:24px;
+      padding:16px 18px;
+      color:var(--ink2);
+      background:
+        radial-gradient(circle at 20% 18%, rgba(255,255,255,.18), transparent 22%),
+        radial-gradient(circle at 82% 26%, rgba(145,88,25,.08), transparent 20%),
+        linear-gradient(180deg,var(--paper1),var(--paper2));
+      box-shadow:
+        inset 0 0 0 1px rgba(115,76,20,.18),
+        inset 0 10px 28px rgba(255,255,255,.08),
+        0 12px 28px rgba(0,0,0,.20);
+    }
+    .sessionBar{
+      margin:0 0 8px;
+      padding:8px 10px;
+      border-radius:14px;
+      background:rgba(136,93,29,.10);
+      border:1px solid rgba(136,93,29,.16);
+      font-size:12px;
+      font-weight:900;
+      color:var(--ink);
+      text-transform:uppercase;
+      letter-spacing:.02em;
+    }
+    .ruleTitle{
+      margin:0 0 6px;
+      font:700 24px Georgia,serif;
+      line-height:1;
+      text-transform:lowercase;
+      color:var(--ink);
+    }
+    .sectionLabel{
+      margin-top:9px;
+      margin-bottom:4px;
+      font-size:11px;
+      font-weight:900;
+      color:var(--ink);
+      text-transform:uppercase;
+      letter-spacing:.03em;
+    }
+    .copy,.parchment p,.parchment li{
+      font-family:Georgia,serif;
+      font-size:14px;
+      line-height:1.14;
+      margin:0 0 5px;
+      color:var(--ink2);
+    }
+    .parchment ul{margin:4px 0 4px 18px;padding:0}
+    .boundaryHelp{
+      margin-top:4px;
+      font-family:Georgia,serif;
+      font-size:13px;
+      line-height:1.14;
+      color:var(--ink);
+    }
+    .progressGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:6px;
+      margin-bottom:10px;
+    }
+    .progressPill{
+      border-radius:12px;
+      padding:8px 10px;
+      background:rgba(136,93,29,.10);
+      border:1px solid rgba(136,93,29,.16);
+      font-size:12px;
+      font-weight:800;
+      color:var(--ink);
+      line-height:1.15;
+    }
+    .practiceSentence{
+      margin:4px 0 10px;
+      min-height:72px;
+      text-align:center;
+      font-family:Georgia,serif;
+      font-size:22px;
+      line-height:1.12;
+      color:var(--ink2);
+    }
+    .answer{
+      display:block;
+      width:88%;
+      margin:0 auto;
+      padding:12px 14px;
+      border-radius:18px;
+      border:2px solid rgba(106,71,24,.58);
+      background:#f8edd1;
+      color:var(--ink2);
+      font:700 20px Georgia,serif;
+      text-align:center;
+      outline:none;
+    }
+    .hint{
+      min-height:28px;
+      margin-top:10px;
+      text-align:center;
+      font-family:Georgia,serif;
+      font-size:15px;
+      line-height:1.15;
+      color:var(--ink);
+    }
+    .reveal{
+      min-height:34px;
+      margin-top:12px;
+      text-align:center;
+      font-family:Georgia,serif;
+      font-size:25px;
+      line-height:1.05;
+      color:var(--ink);
+      opacity:0;
+      transition:opacity .2s ease;
+    }
+    .reveal.show{opacity:1}
+    .example-line,.boundary-line{transition:background .2s ease, box-shadow .2s ease, padding .2s ease; border-radius:8px;}
+    .example-line.active,.boundary-line.active{background:rgba(255,255,255,.35); box-shadow:0 0 0 1px rgba(136,93,29,.18) inset; padding:2px 4px;}
+    .avatarCard{
+      min-height:0;
+      height:100%;
+      overflow:hidden;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg,rgba(5,10,24,.88),rgba(10,24,56,.64));
+      display:flex;
+      flex-direction:column;
+    }
+    .avatarTitle{
+      padding:12px 14px;
+      text-align:center;
+      font-size:18px;
+      font-weight:900;
+      background:rgba(5,9,24,.75);
+      flex:0 0 auto;
+    }
+    .stats{
+      display:flex;
+      gap:6px;
+      padding:10px;
+      flex-wrap:wrap;
+      flex:0 0 auto;
+    }
+    .stat{
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(13,22,48,.78);
+      border:1px solid rgba(255,255,255,.12);
+      font-size:14px;
+      font-weight:900;
+    }
+    .avatarWrap{
+      flex:1 1 auto;
+      min-height:0;
+      padding:10px;
+    }
+    .avatarWrap img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:contain;
+      object-position:top center;
+      border-radius:18px;
+      background:rgba(8,16,40,.18);
+    }
+    .avatar-pop{animation:avatarPop .35s ease}
+    .avatar-bounce{animation:avatarBounce .7s ease}
+    .avatar-think-glow{animation:thinkGlow 1s ease-in-out 2}
+    @keyframes avatarPop{0%{transform:scale(.97);opacity:.88}100%{transform:scale(1);opacity:1}}
+    @keyframes avatarBounce{0%,100%{transform:translateY(0)}30%{transform:translateY(-10px)}60%{transform:translateY(0)}}
+    @keyframes thinkGlow{0%,100%{filter:drop-shadow(0 0 0 rgba(255,228,147,0))}50%{filter:drop-shadow(0 0 16px rgba(255,228,147,.75))}}
+    @media (max-width:1100px){
+      .lessonLayout{grid-template-columns:1fr}
+      .avatarCard{min-height:260px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="lessonTitle">Lesson</h1>
+    <a class="backBtn" href="javascript:history.back()">Back</a>
+  </header>
+
+  <div class="controls">
+    <button class="btn" id="startBtn">Start</button>
+    <button class="btn" id="pauseBtn">Pause</button>
+    <button class="btn" id="resumeBtn">Resume</button>
+    <button class="btn" id="repeatBtn">Repeat</button>
+    <button class="btn" id="playBtn">Play</button>
+    <button class="btn warn" id="resetBtn">Reset</button>
+    <label class="btn toggle"><input id="voiceToggle" type="checkbox" checked> Voice</label>
+  </div>
+
+  <div class="scriptBar" id="scriptBar"><div>Script will appear here when teaching or prompting begins.</div></div>
+
+  <div class="shell">
+    <div class="lessonLayout">
+      <section class="mainPanel">
+        <div class="parchment">
+          <div class="sessionBar" id="leftBar">Teaching</div>
+          <div class="ruleTitle" id="ruleTitle"></div>
+
+          <div class="sectionLabel">What the rule is</div>
+          <p id="ruleText" class="copy"></p>
+
+          <div class="sectionLabel">Why it matters</div>
+          <p id="whyText" class="copy"></p>
+        </div>
+
+        <div class="parchment">
+          <div class="sessionBar" id="middleBar">Rule boundaries</div>
+
+          <div class="sectionLabel">When to use it</div>
+          <p id="useText" class="copy"></p>
+
+          <div class="sectionLabel">When it does not apply</div>
+          <p id="notUseText" class="copy"></p>
+
+          <div class="sectionLabel">Examples</div>
+          <ul id="exampleList"></ul>
+
+          <div class="sectionLabel">Looks like it might apply, but it does not</div>
+          <p class="boundaryHelp boundary-line" data-speech-key="These words look close to the pattern, but a rule boundary or exception means the rule does not apply.">These words look close to the pattern, but a rule boundary or exception means the rule does not apply.</p>
+          <ul id="nearMissList"></ul>
+        </div>
+
+        <div class="parchment">
+          <div class="sessionBar" id="rightBar">Practice</div>
+
+          <div class="progressGrid">
+            <div class="progressPill">Prompt: <span id="progressPrompt">0 of 0</span></div>
+            <div class="progressPill">Bank size: <span id="progressBank">0</span></div>
+            <div class="progressPill">Recycled: <span id="progressRecycle">0</span></div>
+            <div class="progressPill">Missed: <span id="progressMissed">0</span></div>
+            <div class="progressPill">Adaptive: <span id="progressAdaptive">0</span></div>
+          </div>
+
+          <div class="practiceSentence" id="sentence">Press Start.</div>
+          <input
+            class="answer"
+            id="answer"
+            type="text"
+            placeholder="Type the word"
+            spellcheck="false"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="off"
+          >
+          <div class="hint" id="hint"></div>
+          <div class="reveal" id="reveal"></div>
+        </div>
+      </section>
+
+      <aside class="avatarCard">
+        <div class="avatarTitle">Ry Ry The French Fry</div>
+        <div class="stats">
+          <div class="stat">Accuracy: <span id="acc">0%</span></div>
+          <div class="stat">Streak: <span id="streak">0</span></div>
+          <div class="stat">XP: <span id="xp">0</span></div>
+        </div>
+        <div class="avatarWrap">
+          <img id="avatar" src="assets/avatars/avatar_teach.png" alt="Ry Ry The French Fry">
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="registry/embedded-registry.js"></script>
+  <script src="scripts/engine/registry.js"></script>
+  <script src="registry/word-sentences.js"></script>
+  <script src="scripts/engine/storage.js"></script>
+  <script src="scripts/engine/mastery.js"></script>
+  <script src="scripts/engine/speech.js"></script>
+  <script src="scripts/engine/avatar.js"></script>
+  <script src="scripts/engine/effects.js"></script>
+  <script src="scripts/engine/lesson-session.js"></script>
+
+  <script>
+    const $ = id => document.getElementById(id);
+
+    let lessonBundle = null;
+    let session = null;
+    let delayedTimer = null;
+    let delayedRemaining = 0;
+    let delayedStartedAt = 0;
+    let delayedCallback = null;
+    let currentScript = [];
+
+    function voiceEnabled() {
+      return $("voiceToggle").checked;
+    }
+
+    function resetScript(lines) {
+      currentScript = (lines || []).filter(Boolean);
+      const bar = $("scriptBar");
+      bar.innerHTML = "";
+      if (!currentScript.length) {
+        const div = document.createElement("div");
+        div.textContent = "Script will appear here when teaching or prompting begins.";
+        bar.appendChild(div);
+        return;
+      }
+      currentScript.forEach((line, idx) => {
+        const div = document.createElement("div");
+        div.textContent = line;
+        div.dataset.idx = String(idx);
+        div.style.opacity = idx === 0 ? "1" : ".6";
+        div.style.marginBottom = "4px";
+        bar.appendChild(div);
+      });
+      bar.scrollTop = 0;
+    }
+
+    function normalizeSpeechKey(text) {
+      return String(text || "").trim().replace(/\s+/g, " ").toLowerCase();
+    }
+
+    function clearPanelHighlights() {
+      document.querySelectorAll(".example-line.active, .boundary-line.active, .boundaryHelp.active").forEach(el => el.classList.remove("active"));
+    }
+
+    function scrollWithinPanel(target) {
+      if (!target) return;
+      const panel = target.closest('.parchment');
+      if (!panel) return;
+      const targetTop = target.offsetTop - 16;
+      const targetBottom = targetTop + target.offsetHeight + 16;
+      const viewTop = panel.scrollTop;
+      const viewBottom = viewTop + panel.clientHeight;
+      let nextTop = viewTop;
+      if (targetTop < viewTop) nextTop = Math.max(0, targetTop);
+      else if (targetBottom > viewBottom) nextTop = Math.max(0, targetBottom - panel.clientHeight);
+      if (Math.abs(nextTop - panel.scrollTop) > 4) panel.scrollTo({ top: nextTop, behavior: 'smooth' });
+    }
+
+    function markPanelLineActive(lineText) {
+      clearPanelHighlights();
+      const key = normalizeSpeechKey(lineText);
+      if (!key) return;
+      const targets = Array.from(document.querySelectorAll("[data-speech-key]"));
+      const target = targets.find(el => normalizeSpeechKey(el.dataset.speechKey) === key);
+      if (target) {
+        target.classList.add("active");
+        scrollWithinPanel(target);
+      }
+    }
+
+    function markScriptLineActive(lineText) {
+      const bar = $("scriptBar");
+      const children = Array.from(bar.children);
+      children.forEach(el => { el.style.opacity = ".45"; el.style.fontWeight = "500"; });
+      const target = children.find(el => el.textContent === lineText);
+      if (target) {
+        target.style.opacity = "1";
+        target.style.fontWeight = "800";
+        const targetTop = target.offsetTop - 8;
+        const targetBottom = targetTop + target.offsetHeight + 8;
+        const viewTop = bar.scrollTop;
+        const viewBottom = viewTop + bar.clientHeight;
+        let nextTop = viewTop;
+        if (targetTop < viewTop) nextTop = Math.max(0, targetTop);
+        else if (targetBottom > viewBottom) nextTop = Math.max(0, targetBottom - bar.clientHeight);
+        if (Math.abs(nextTop - bar.scrollTop) > 4) bar.scrollTo({ top: nextTop, behavior: 'smooth' });
+      }
+      markPanelLineActive(lineText);
+    }
+
+    function speak(lines, done) {
+      resetScript(lines);
+      if (!voiceEnabled()) {
+        currentScript.forEach(line => markScriptLineActive(line));
+        if (done) done();
+        return;
+      }
+      if (!window.RR_SPEECH || !window.RR_SPEECH.speakQueue) {
+        if (done) done();
+        return;
+      }
+      window.RR_SPEECH.speakQueue(currentScript, done, markScriptLineActive);
+    }
+
+    function scheduleDelay(ms, callback) {
+      clearTimeout(delayedTimer);
+      delayedRemaining = ms;
+      delayedCallback = callback;
+      delayedStartedAt = Date.now();
+      delayedTimer = setTimeout(() => {
+        delayedTimer = null;
+        delayedRemaining = 0;
+        const cb = delayedCallback;
+        delayedCallback = null;
+        if (cb) cb();
+      }, ms);
+    }
+
+    function stopDelay() {
+      if (delayedTimer) {
+        clearTimeout(delayedTimer);
+        delayedTimer = null;
+        delayedRemaining = Math.max(0, delayedRemaining - (Date.now() - delayedStartedAt));
+      }
+    }
+
+    function updateStats() {
+      const accuracy = session && session.total > 0
+        ? Math.round((session.correct / session.total) * 100)
+        : 0;
+
+      $("acc").textContent = accuracy + "%";
+      $("streak").textContent = String(session?.streak || 0);
+      $("xp").textContent = String(session?.xp || 0);
+
+      const promptNum = session?.queue?.length
+        ? Math.min((session.index || 0) + 1, session.queue.length)
+        : 0;
+
+      $("progressPrompt").textContent = `${promptNum} of ${session?.queue?.length || 0}`;
+      $("progressBank").textContent = String(session?.bankSize || session?.fullBank?.length || 0);
+      $("progressRecycle").textContent = String(session?.recycleCount || 0);
+      $("progressMissed").textContent = String(session?.missedWordCount || 0);
+      const adaptiveEl = $("progressAdaptive");
+      if (adaptiveEl) adaptiveEl.textContent = String(session?.adaptiveCount || 0);
+    }
+
+    function currentItem() {
+      return session ? window.RR_SESSION.current(session) : null;
+    }
+
+
+    function explainExample(exampleText, card) {
+      const raw = String(exampleText || "").trim();
+      const title = String(card?.title || "the lesson pattern").toLowerCase();
+      if (!raw) return `This example follows the lesson pattern.`;
+
+      const colon = raw.match(/^([^:]+):\s*(.+)$/);
+      if (colon) {
+        const label = colon[1].trim().toLowerCase();
+        const word = colon[2].trim();
+
+        if (label.includes('closed')) {
+          return `In ${word}, the vowel is closed in by one or more consonants, so it usually stays short. That is why this word fits the closed syllable pattern.`;
+        }
+        if (label.includes('open')) {
+          return `In ${word}, the syllable ends with a vowel sound that is left open, so the vowel usually says its long name. That is why this word fits the open syllable pattern.`;
+        }
+        if (label.includes('vowel-consonant-e') || label.includes('magic-e') || label.includes('silent-e')) {
+          return `In ${word}, the final silent e changes the earlier vowel from a short sound to a long sound. That is why this word fits the vowel-consonant-e pattern.`;
+        }
+        if (label.includes('vowel team')) {
+          return `In ${word}, two vowels work together in the same syllable to make one main vowel sound. That is why this word fits the vowel team pattern.`;
+        }
+        if (label.includes('r-controlled')) {
+          return `In ${word}, the vowel is followed by r, and the r changes the vowel sound so it is no longer a regular short or long vowel. That is why this word fits the r-controlled pattern.`;
+        }
+        if (label.includes('final stable')) {
+          return `In ${word}, the ending stays together as a stable final chunk. Readers can spot that ending and use it to divide and spell the word more accurately.`;
+        }
+        if (label.includes('consonant-le')) {
+          return `In ${word}, the consonant and le stay together at the end to form a final syllable. That is why this word fits the consonant-le pattern.`;
+        }
+        if (label.includes('plural')) {
+          return `In ${word}, the ending changes the base word so it names more than one. The spelling of the ending shows which plural pattern this word uses.`;
+        }
+        if (label.includes('possessive')) {
+          return `In ${word}, the apostrophe shows ownership rather than a simple plural. That is why the ending must match who owns the object in the sentence.`;
+        }
+        if (label.includes('prefix')) {
+          return `In ${word}, the beginning word part changes the meaning of the base word. This fits because the prefix adds meaning while the base still carries the core idea.`;
+        }
+        if (label.includes('suffix')) {
+          return `In ${word}, the ending is added to a base word to change its meaning or job in the sentence. This fits because the suffix pattern is doing that work here.`;
+        }
+        if (label.includes('root')) {
+          return `In ${word}, a meaningful root helps explain both the spelling and the meaning. This fits because the word is built from a recognizable word part family.`;
+        }
+        if (label.includes('homophone')) {
+          return `In ${word}, the spelling must match the meaning of the sentence, not just the sound. This fits because it is the correct word choice for that exact meaning.`;
+        }
+        if (label.includes('irregular')) {
+          return `In ${word}, part of the spelling does not follow the most common pattern a reader might expect. This fits because it must be remembered as a less predictable word.`;
+        }
+      }
+
+      let change = raw.match(/^(.+?)\s+(?:becomes|->|→)\s+(.+)$/i);
+      if (change) {
+        const base = change[1].trim();
+        const changed = change[2].trim();
+        if (/(ing|ed|er|est)$/i.test(changed)) {
+          return `This shows how ${base} changes when an ending is added. The spelling of ${changed} follows the lesson rule that keeps the base word readable and the vowel sound correct.`;
+        }
+        return `This example shows how the spelling changes from ${base} to ${changed} when the lesson pattern is applied.`;
+      }
+
+      if (/ has /i.test(raw) || / uses /i.test(raw)) {
+        return `This example points directly to the part of the word where the lesson pattern appears, so the reader can connect the rule to the spelling.`;
+      }
+
+      if (title.includes('syllable')) {
+        return `This word fits because its vowel and consonant pattern creates the syllable type named in the lesson. The syllable pattern helps the reader predict the vowel sound.`;
+      }
+      if (title.includes('vowel')) {
+        return `This word fits because the vowel pattern in the word matches the lesson and helps explain why the vowel says that sound.`;
+      }
+      if (title.includes('doubling')) {
+        return `This word fits because the spelling changes in a way that protects the short vowel when the ending is added.`;
+      }
+      if (title.includes('prefix') || title.includes('suffix') || title.includes('root')) {
+        return `This word fits because one meaningful word part is attached to another, and that structure explains both the spelling and the meaning.`;
+      }
+
+      return `This example fits because the letters in the word follow the rule taught in this lesson, and that pattern explains how the word is read and spelled.`;
+    }
+
+    function renderTeaching() {
+      const card = (lessonBundle?.data?.teaching_cards || [])[0] || {};
+
+      $("leftBar").textContent = "Teaching";
+      $("middleBar").textContent = "Rule boundaries";
+      $("ruleTitle").textContent = card.title || "";
+      $("ruleText").textContent = card.rule || "";
+      $("whyText").textContent = card.why || "";
+      $("useText").textContent = card.whenToUse || "";
+      $("notUseText").textContent = card.whenNotToUse || "";
+
+      $("exampleList").innerHTML = "";
+      $("nearMissList").innerHTML = "";
+      if ($("boundaryIntro")) { $("boundaryIntro").dataset.speechKey = "These words look close to the pattern, but a rule boundary or exception means the rule does not apply."; }
+
+      (card.examples || []).forEach(item => {
+        const li = document.createElement("li");
+        const main = document.createElement("div");
+        main.textContent = item;
+        main.style.fontWeight = "700";
+        main.className = "example-line";
+        main.dataset.speechKey = String(item);
+        const exp = document.createElement("div");
+        exp.textContent = explainExample(item, card);
+        exp.style.fontSize = "13px";
+        exp.style.marginBottom = "6px";
+        exp.className = "example-line";
+        exp.dataset.speechKey = explainExample(item, card);
+        li.appendChild(main);
+        li.appendChild(exp);
+        $("exampleList").appendChild(li);
+      });
+
+      const detailed = card.nearMissesDetailed || [];
+      if (detailed.length) {
+        detailed.forEach(item => {
+          const li = document.createElement("li");
+          li.className = "boundary-line";
+          li.dataset.speechKey = `${item.word}. ${item.reason}`;
+          li.textContent = `${item.word} — ${item.reason}`;
+          $("nearMissList").appendChild(li);
+        });
+      } else {
+        (card.nearMisses || []).forEach(item => {
+          const li = document.createElement("li");
+          li.className = "boundary-line";
+          li.dataset.speechKey = String(item);
+          li.textContent = item;
+          $("nearMissList").appendChild(li);
+        });
+      }
+      clearPanelHighlights();
+    }
+
+    function renderPracticeItem() {
+      const item = currentItem();
+      if (!item) {
+        $("sentence").textContent = "No practice items loaded.";
+        $("answer").value = "";
+        $("hint").textContent = "";
+        $("reveal").textContent = "";
+        $("reveal").classList.remove("show");
+        return;
+      }
+
+      $("rightBar").textContent = "Practice";
+      const rawBlank = String(item.blankSentence || '').trim();
+      const hasWeakBlank = !rawBlank || rawBlank.toLowerCase() === 'type the word' || /adaptive review from/i.test(rawBlank);
+      const sourceSentence = String(item.fullSentence || '').trim();
+      const fallbackSentence = sourceSentence && item.answer
+        ? sourceSentence.replace(new RegExp('\\b' + String(item.answer).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\b', 'i'), '______')
+        : 'Spell the word in the sentence shown.';
+      const practiceSentence = hasWeakBlank ? fallbackSentence : rawBlank;
+      $("sentence").textContent = practiceSentence;
+      $("answer").value = "";
+      $("hint").textContent = "";
+      $("reveal").textContent = "";
+      $("reveal").classList.remove("show");
+      $("answer").focus();
+      window.RR_SESSION.persist(session);
+      updateStats();
+    }
+
+    function playPrompt() {
+      const item = currentItem();
+      if (!item) return;
+
+      session.phase = "practice";
+      renderPracticeItem();
+
+      if (window.RR_AVATAR && window.RR_AVATAR.setState) {
+        window.RR_AVATAR.setState("teach", "avatar-pop");
+      }
+
+      speak([
+        item.fullSentence,
+        item.spokenPrompt || `Spell the word ${item.answer}.`
+      ]);
+
+      window.RR_SESSION.persist(session);
+    }
+
+    function startLesson() {
+      if (!lessonBundle || !session) return;
+
+      renderTeaching();
+
+      const card = (lessonBundle.data.teaching_cards || [])[0] || {};
+      const boundaryIntro =
+        "These words look close to the pattern, but a rule boundary or exception means the rule does not apply.";
+
+      const boundaryLines = [boundaryIntro].concat(
+        (card.nearMissesDetailed || []).map(x => `${x.word}. ${x.reason}`)
+      );
+
+      session.phase = "teaching";
+      window.RR_SESSION.persist(session);
+
+      speak([
+        `Let's learn ${card.title || lessonBundle.data.lesson.title}.`,
+        card.rule || "",
+        card.why || "",
+        `When to use it. ${card.whenToUse || ""}`,
+        `When it does not apply. ${card.whenNotToUse || ""}`,
+        "Examples.",
+        ...((card.examples || []).flatMap(ex => [String(ex), explainExample(ex, card)])),
+        ...boundaryLines,
+        "Now it is time to practice."
+      ], () => {
+        session.phase = "practice";
+        session.index = 0;
+        session.missCount = 0;
+        window.RR_SESSION.persist(session);
+        playPrompt();
+      });
+    }
+
+    function advanceToNext() {
+      if (session.index < session.queue.length - 1) {
+        session.index += 1;
+        session.missCount = 0;
+        session.phase = "practice";
+        renderPracticeItem();
+        playPrompt();
+        return;
+      }
+
+      $("sentence").textContent = "Lesson complete!";
+      $("hint").textContent = "Great job.";
+      $("answer").value = "";
+      $("reveal").textContent = "";
+      $("reveal").classList.remove("show");
+      window.RR_SESSION.persist(session);
+      updateStats();
+    }
+
+    function handleCorrect() {
+      session.total += 1;
+      session.correct += 1;
+      session.streak += 1;
+      session.xp += 12;
+
+      const item = currentItem();
+      window.RR_SESSION.markCorrect(session, item);
+
+      if (window.RR_MASTERY && window.RR_MASTERY.recordCorrect) {
+        window.RR_MASTERY.recordCorrect(
+          lessonBundle.catId,
+          lessonBundle.lessonCode,
+          item.answer,
+          session.streak,
+          item
+        );
+      }
+
+      $("hint").textContent = "Correct!";
+      updateStats();
+
+      if (window.RR_AVATAR && window.RR_AVATAR.setState) {
+        if (session.streak >= 3) {
+          window.RR_AVATAR.setState("victory", "avatar-bounce");
+          if (window.RR_EFFECTS && window.RR_EFFECTS.triggerCelebration) {
+            window.RR_EFFECTS.triggerCelebration();
+          }
+        } else {
+          window.RR_AVATAR.setState("teach", "avatar-pop");
+        }
+      }
+
+      window.RR_SESSION.persist(session);
+      scheduleDelay(1400, advanceToNext);
+    }
+
+    function handleIncorrect() {
+      const item = currentItem();
+
+      session.total += 1;
+      session.streak = 0;
+      session.missCount = (session.missCount || 0) + 1;
+
+      window.RR_SESSION.markFirstMissInCycle(session, item);
+
+      if (window.RR_MASTERY && window.RR_MASTERY.recordIncorrect) {
+        window.RR_MASTERY.recordIncorrect(
+          lessonBundle.catId,
+          lessonBundle.lessonCode,
+          item.answer,
+          session.streak,
+          item
+        );
+      }
+
+      updateStats();
+
+      if (session.missCount === 1) {
+        $("hint").textContent = "Think about the rule.";
+        if (window.RR_AVATAR && window.RR_AVATAR.setState) {
+          window.RR_AVATAR.setState("think", "avatar-think-glow");
+        }
+
+        window.RR_SESSION.recycleOncePerCycle(session, item, 3);
+
+        speak([
+          item.reteach || lessonBundle.data.lesson.ruleSummary,
+          item.fullSentence,
+          item.spokenPrompt || `Spell the word ${item.answer}.`
+        ]);
+
+        window.RR_SESSION.persist(session);
+        return;
+      }
+
+      if (session.missCount === 2) {
+        $("hint").textContent = "Try it again.";
+        if (window.RR_AVATAR && window.RR_AVATAR.setState) {
+          window.RR_AVATAR.setState("encourage", "avatar-pop");
+        }
+
+        window.RR_SESSION.recycleOncePerCycle(session, item, 2);
+
+        speak([
+          "Second hint.",
+          item.reteach || lessonBundle.data.lesson.ruleSummary,
+          item.fullSentence,
+          item.spokenPrompt || `Spell the word ${item.answer}.`
+        ]);
+
+        window.RR_SESSION.persist(session);
+        return;
+      }
+
+      $("hint").textContent = "Look carefully at the correct spelling.";
+      $("reveal").textContent = item.answer;
+      $("reveal").classList.add("show");
+
+      if (window.RR_AVATAR && window.RR_AVATAR.setState) {
+        window.RR_AVATAR.setState("teach", "avatar-pop");
+      }
+
+      window.RR_SESSION.recycleOncePerCycle(session, item, 4);
+
+      speak([
+        `The correct spelling is ${item.answer}.`,
+        `Spell it with me. ${spellLetters(item.answer)}`,
+        item.fullSentence
+      ], () => {
+        scheduleDelay(4200, advanceToNext);
+      });
+
+      session.missCount = 0;
+      window.RR_SESSION.persist(session);
+      updateStats();
+    }
+
+    function submitAnswer() {
+      const item = currentItem();
+      if (!item) return;
+
+      const guess = ($("answer").value || "").trim().toLowerCase();
+      if (!guess) return;
+
+      stopDelay();
+      if (window.RR_SPEECH && window.RR_SPEECH.cancel) {
+        window.RR_SPEECH.cancel();
+      }
+
+      if (guess === String(item.answer).toLowerCase()) {
+        handleCorrect();
+      } else {
+        handleIncorrect();
+      }
+    }
+
+    function pauseLesson() {
+      stopDelay();
+      if (window.RR_SPEECH && window.RR_SPEECH.pause) {
+        window.RR_SPEECH.pause();
+      }
+      if (session) {
+        session.phase = "paused";
+        window.RR_SESSION.persist(session);
+      }
+    }
+
+    function resumeLesson() {
+      if (window.RR_SPEECH && window.RR_SPEECH.resume) {
+        window.RR_SPEECH.resume();
+      }
+
+      if (delayedRemaining > 0 && delayedCallback) {
+        scheduleDelay(delayedRemaining, delayedCallback);
+      } else if (currentScript.length) {
+        speak(currentScript);
+      }
+
+      if (session) {
+        session.phase = "practice";
+        window.RR_SESSION.persist(session);
+      }
+    }
+
+    function repeatCurrent() {
+      const item = currentItem();
+      const card = (lessonBundle?.data?.teaching_cards || [])[0] || {};
+      const boundaryIntro = "These words look close to the pattern, but a rule boundary or exception means the rule does not apply.";
+
+      if (session && session.phase === "teaching") {
+        speak([
+          card.rule || "",
+          card.why || "",
+          `When to use it. ${card.whenToUse || ""}`,
+          `When it does not apply. ${card.whenNotToUse || ""}`,
+          boundaryIntro,
+          ...((card.nearMissesDetailed || []).map(x => `${x.word}. ${x.reason}`))
+        ]);
+        return;
+      }
+
+      if (item) {
+        speak([
+          item.fullSentence,
+          item.spokenPrompt || `Spell the word ${item.answer}.`
+        ]);
+      }
+    }
+
+    function spellLetters(word) {
+      return window.RR_SPEECH && window.RR_SPEECH.spellLetters
+        ? window.RR_SPEECH.spellLetters(word)
+        : String(word).split("").join(". ");
+    }
+
+    function getParam(name) {
+      return new URLSearchParams(window.location.search).get(name);
+    }
+
+    function lessonStorageKey(cat, lesson) {
+      return `rr_session_${cat}_${lesson}`;
+    }
+
+    function masteryStorageKey(cat, lesson) {
+      return `rr_mastery_${cat}_${lesson}`;
+    }
+
+    function resetLessonProgress() {
+      if (!lessonBundle || !session) return;
+
+      if (!confirm("Reset this lesson session and clear only this lesson's saved mastery?")) {
+        return;
+      }
+
+      stopDelay();
+
+      if (window.RR_SPEECH && window.RR_SPEECH.cancel) {
+        window.RR_SPEECH.cancel();
+      }
+
+      try {
+        localStorage.removeItem("rr_session_v28");
+
+        const masteryRaw = localStorage.getItem("rr_mastery_v28");
+        const masteryMap = masteryRaw ? JSON.parse(masteryRaw) : {};
+        const lessonKey = `${lessonBundle.catId}:${lessonBundle.lessonCode}`;
+        delete masteryMap[lessonKey];
+        localStorage.setItem("rr_mastery_v28", JSON.stringify(masteryMap));
+      } catch (_) {}
+
+      if (window.RR_SESSION && window.RR_SESSION.clear) {
+        window.RR_SESSION.clear();
+      }
+
+      session = window.RR_SESSION.createSession(
+        lessonBundle.data,
+        lessonBundle.catId,
+        lessonBundle.lessonCode
+      );
+
+      $("scriptBar").textContent = "Lesson reset. Test practice from this run will not carry forward.";
+      renderTeaching();
+      renderPracticeItem();
+      updateStats();
+    }
+
+    function loadLessonFile(path) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = path + `?v=${Date.now()}`;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error(`Could not load ${path}`));
+        document.head.appendChild(script);
+      });
+    }
+
+    async function bootLesson() {
+      try {
+        const cat = getParam("cat");
+        const lesson = getParam("lesson");
+
+        if (!cat || !lesson) {
+          throw new Error("Missing cat or lesson in URL.");
+        }
+
+        const registryLessons = (window.RR_REGISTRY && window.RR_REGISTRY.lessons && window.RR_REGISTRY.lessons[cat]) || [];
+        const foundLesson = registryLessons.find(l => l.code === lesson);
+        const starFallback = {
+          "A1": "A1_guard-the-vowel",
+          "A1.5": "A1.5_floss",
+          "A2": "A2_silent-e",
+          "A3": "A3_vowel-teams",
+          "A4": "A4_r-controlled-vowels",
+          "A5": "A5_diphthongs",
+          "A6": "A6_syllable-types",
+          "A7": "A7_consonant-doubling",
+          "A8": "A8_hard-soft-cg",
+          "A9": "A9_final-stable-syllables",
+          "A10": "A10_prefix-foundations",
+          "A11": "A11_suffix-foundations",
+          "A12": "A12_plurals-possessives",
+          "A13": "A13_homophones",
+          "A14": "A14_irregular-spellings",
+          "A15": "A15_greek-latin-roots",
+          "A16": "A16_advanced-vowel-patterns",
+          "A17": "A17_multi-syllable-encoding"
+        };
+        const folder = (foundLesson && foundLesson.folder) || (cat === "star-speller" ? starFallback[lesson] : null) || lesson;
+        const dataPath = `modules/${cat}/${folder}/data.js`;
+
+        window.RR_LESSON_DATA = null;
+        await loadLessonFile(dataPath);
+
+        if (!window.RR_LESSON_DATA) {
+          throw new Error(`Lesson data did not initialize from ${dataPath}`);
+        }
+
+        lessonBundle = {
+          catId: cat,
+          lessonCode: lesson,
+          data: window.RR_LESSON_DATA
+        };
+
+        $("lessonTitle").textContent = window.RR_LESSON_DATA.lesson?.title || "Lesson";
+
+        const restored = window.RR_SESSION.restore(cat, lesson);
+        session = restored || window.RR_SESSION.createSession(window.RR_LESSON_DATA, cat, lesson);
+
+        renderTeaching();
+        renderPracticeItem();
+        updateStats();
+      } catch (err) {
+        $("lessonTitle").textContent = "Lesson load error";
+        $("scriptBar").textContent = err.message;
+        $("sentence").textContent = err.message;
+        console.error(err);
+      }
+    }
+
+    $("startBtn").addEventListener("click", startLesson);
+    $("pauseBtn").addEventListener("click", pauseLesson);
+    $("resumeBtn").addEventListener("click", resumeLesson);
+    $("repeatBtn").addEventListener("click", repeatCurrent);
+    $("playBtn").addEventListener("click", playPrompt);
+    $("resetBtn").addEventListener("click", resetLessonProgress);
+
+    $("answer").addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        submitAnswer();
+      }
+    });
+
+    bootLesson();
+  </script>
+</body>
+</html>
