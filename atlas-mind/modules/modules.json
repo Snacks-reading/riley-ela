@@ -1,9 +1,0 @@
-{
-  "modules": [
-    {"id":"supply-shocks","title":"Supply Shock Decoder","domain":"todays-world","cover":"🌍","hook":"Why one shipping delay can raise your grocery bill.","minutes":9,"progress":0,"lessonId":"lesson-supply-shock"},
-    {"id":"election-framing","title":"Election Narrative Framing","domain":"todays-world","cover":"🗳️","hook":"How story framing can move undecided voters faster than facts.","minutes":11,"progress":0},
-    {"id":"empire-overstretch","title":"Empire Overstretch","domain":"history-civilization","cover":"🏛️","hook":"How dominant systems collapse when commitments outpace capacity.","minutes":8,"progress":0,"lessonId":"lesson-empire-pattern"},
-    {"id":"industrial-s-curves","title":"Innovation S-Curves","domain":"history-civilization","cover":"⚙️","hook":"Why each new tech wave looks small before it rewrites power.","minutes":7,"progress":0},
-    {"id":"status-anxiety","title":"Status Anxiety Engine","domain":"psychology-behavior","cover":"🧠","hook":"Why uncertainty makes people consume identity, not utility.","minutes":10,"progress":0}
-  ]
-}
