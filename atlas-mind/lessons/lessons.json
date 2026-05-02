@@ -1,0 +1,36 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-supply-shock",
+      "title": "Supply Shock Decoder",
+      "coachVoice": "en-US",
+      "segments": [
+        {"type":"hook","coach":"This is not really a shipping story. It's a trust story. When one link breaks, everyone overreacts."},
+        {"type":"context","coach":"In global supply chains, delay at ports cascades into shortages, then panic buying, then price spikes."},
+        {"type":"core","coach":"Insight one: prices often move before shelves look empty, because expectations move first."},
+        {"type":"scene","coach":"Picture a grocery manager cutting order size to control risk. That caution itself creates scarcity signals."},
+        {"type":"quote","coach":"'Markets are voting machines in the short run.' Translation: emotion sets the first price, reality sets the second."},
+        {"type":"theme","coach":"Theme: fragility plus fear amplifies disruption into inflation psychology."},
+        {"type":"application","coach":"In your life, avoid reacting to first headlines. Wait for inventory and wage data before big money decisions."},
+        {"type":"reflection","coach":"Challenge: where in your work does perceived scarcity create bad decisions before evidence arrives?"}
+      ],
+      "quiz": {"question":"If a shock starts in logistics, what usually changes first?","options":["Consumer expectations","Factory equipment","Household wages"],"answer":0,"hint":"Think psychology before machinery.","explanation":"Expectations front-run physical effects."}
+    },
+    {
+      "id": "lesson-empire-pattern",
+      "title": "Empire Overstretch",
+      "coachVoice": "en-US",
+      "segments": [
+        {"type":"hook","coach":"Great powers rarely collapse from one defeat. They erode from too many promises."},
+        {"type":"context","coach":"Rome, Spain, and Britain each reached a point where military, finance, and legitimacy diverged."},
+        {"type":"core","coach":"Pattern one: expansion brings prestige. Pattern two: maintenance costs compound."},
+        {"type":"scene","coach":"Imagine ruling distant regions while tax inflow slows. You borrow more just to preserve yesterday's map."},
+        {"type":"quote","coach":"'History doesn't repeat, but it rhymes.' Use this as a pattern cue, not a prophecy."},
+        {"type":"theme","coach":"Theme: systems fail when narrative strength hides operational weakness."},
+        {"type":"application","coach":"Apply this to teams: stop adding commitments when execution quality drops."},
+        {"type":"reflection","coach":"Challenge: what promise in your life is now bigger than your real capacity?"}
+      ],
+      "quiz": {"question":"What best signals overstretch?","options":["Rising commitments with falling execution quality","Larger celebrations","Higher short-term morale"],"answer":0,"hint":"Watch capacity, not rhetoric.","explanation":"Overstretch is a capacity mismatch problem."}
+    }
+  ]
+}

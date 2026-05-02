@@ -1,0 +1,22 @@
+{
+  "domains": [
+    {
+      "id": "todays-world",
+      "title": "Today's World (Live Intelligence)",
+      "description": "Decode current events with pattern recognition and second-order thinking.",
+      "modules": ["supply-shocks", "election-framing"]
+    },
+    {
+      "id": "history-civilization",
+      "title": "History & Civilization",
+      "description": "Use historical cycles to understand present tensions.",
+      "modules": ["empire-overstretch", "industrial-s-curves"]
+    },
+    {
+      "id": "psychology-behavior",
+      "title": "Psychology, Behavior & Relationships",
+      "description": "Understand bias, fear, and social contagion shaping modern behavior.",
+      "modules": ["status-anxiety"]
+    }
+  ]
+}
